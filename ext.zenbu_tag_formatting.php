@@ -15,7 +15,7 @@
  * @link	http://nicolasbottari.com/eecms/zenbu/
  * @see		http://nicolasbottari.com/eecms/docs/zenbu/
  *
- * Solspace User Module: 
+ * Solspace Tag Module: 
  * @link 	http://www.solspace.com/software/detail/tag/
  * 
  */
@@ -51,22 +51,21 @@ class Zenbu_tag_formatting_ext {
 	* 	                       			of field information (ids, fieldtype, name...)
 	* 	@return string 	$field_data 	The modified data to be displayed in the Zenbu column cell 
 	*/
-	function zenbu_modify_field_cell_data($content, $data)
+	function zenbu_modify_field_cell_data($field_data, $info_data)
 	{
 
 		// Check if field is a Solspace Tag field.
 		// If not, just return the content as-is.
-		if($data['fieldtype'][$data['current_field_id']] == 'tag')
+		if($info_data['fieldtype'][$info_data['current_field_id']] == 'tag')
 		{
 			$output = '';
-			$content = explode("\n", $content);
+			$field_data = explode("\n", $field_data);
 
 			// We're storing data in a session variable to avoid
 			// making this query multiple times for each Zenbu row
 			if( ! isset($this->EE->session->cache['zenbu_tag_formatting']))
 			{
 				$query = $this->EE->db->query("SELECT settings FROM exp_extensions WHERE class = '".__CLASS__."'");
-				$vars = array();
 				
 				if($query->num_rows() > 0)
 				{
@@ -84,14 +83,14 @@ class Zenbu_tag_formatting_ext {
 				switch($this->EE->session->cache['zenbu_tag_formatting']['separator'])
 				{
 					case 'br':
-						foreach($content as $key => $val)
+						foreach($field_data as $key => $val)
 						{
 							$output .= $val . BR;
 						}
 						return $output;
 					break;
 					case 'comma':
-						foreach($content as $key => $val)
+						foreach($field_data as $key => $val)
 						{
 							$output .= $val . ', ';
 						}
@@ -102,13 +101,13 @@ class Zenbu_tag_formatting_ext {
 			} else {
 				
 				// If we have no settings, just return the data cell content
-				return $content;
+				return $field_data;
 
 			}
 
 		} else {
 
-			return $content;
+			return $field_data;
 
 		}
 	}
