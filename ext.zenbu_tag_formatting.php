@@ -3,17 +3,17 @@
  * Zenbu Solspace Tag formatting extension
  * =========================================
  * Formats Solspace's Tag Fieldtypes in Zenbu
- * @version 1.0.0 
- * @author 	Nicolas Bottari
+ * @version 	1.0.0 
+ * @author 		Nicolas Bottari - Zenbu Studio
  * ------------------------------ 
  * 
  * *** IMPORTANT NOTES ***
- * I (Nicolas Bottari) am not responsible for any
+ * I (Nicolas Bottari/Zenbu Studio) am not responsible for any
  * damage, data loss, etc caused directly or indirectly by the use of this extension. 
  *
  * REQUIRES Zenbu module:
- * @link	http://nicolasbottari.com/eecms/zenbu/
- * @see		http://nicolasbottari.com/eecms/docs/zenbu/
+ * @link	http://zenbustudio.com/software/zenbu/
+ * @see		http://zenbustudio.com/software/docs/zenbu/
  *
  * Solspace Tag Module: 
  * @link 	http://www.solspace.com/software/detail/tag/
