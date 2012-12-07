@@ -1,7 +1,7 @@
 # Zenbu Tag Formatting
 Formats Solspace's Tag Fieldtypes in Zenbu.
 
-This extension for the [Zenbu](http://devot-ee.com/add-ons/zenbu/) add-on modifies how tags from the [Solspace Tag](http://www.solspace.com/docs/addon/c/Tag) module are displayed in Zenbu columns.
+This extension for the [Zenbu](http://zenbustudio.com/software/zenbu/) add-on modifies how tags from the [Solspace Tag](http://www.solspace.com/docs/addon/c/Tag) module are displayed in Zenbu columns.
 
 This add-on is also a teaching aid/example for developers who wish to modify the display of Zenbu column data using the **zenbu_modify_field_cell_data** hook in Zenbu.
 
